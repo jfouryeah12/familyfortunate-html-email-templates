@@ -59,7 +59,7 @@ export default function Email() {
 
       <body style={base}>
         <Section style={container}>
-          <Text style={text.heading}>Hello, Jonah!</Text>
+          <Text style={text.heading}>Hello, Echo!</Text>
 
           <Text style={text.base}>Ready to get started?</Text>
 
