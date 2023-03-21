@@ -96,10 +96,20 @@ export default function Email() {
 
           <Text style={text.heading}>[name,] [question]</Text>
 
-          <Text style={text.base}>Hi [name], your question of the week is</Text>
+          <Text style={text.base}>
+            Hi [name], we hope this week&apos;s prompt will provide some inspiration for you.
+          </Text>
+
+          <Text style={text.base}>Your question of the week is</Text>
 
           <Text style={text.headingcolorbase}>[randomised question from the question bank] </Text>
 
+          <Text style={text.base}>
+            <a href="#" style={{ base, color: '#0037FC' }}>
+              Login
+            </a>{' '}
+            &nbsp;to start your story now.
+          </Text>
           <div
             style={{
               display: 'flex',
@@ -114,36 +124,40 @@ export default function Email() {
           </div>
 
           <Text style={text.base}>
-            Has this week&apos;s prompt inspired you? If not, remember you can go to your membership
-            page &amp; select another question&nbsp;
+            If you&apos;d like to edit any of your stories, you can do that by going to your
+            membership account & clicking on the story&nbsp;
             <a href="#" style={{ base, color: '#0037FC' }}>
-              [link]
-            </a>{' '}
-            &nbsp;from the vast bank of inspiration you have available to you.
+              link to stories page
+            </a>
+            &nbsp; you&apos;d like to edit.
           </Text>
 
           <Text style={text.base}>
-            Whether your story is a few pages, or a few lines long doesn&apos;t matter. It&apos;s
-            your story so make it what you will.
+            When you&apos;re done, your story will be saved to your private Family Fortunate
+            account. Family Fortunate does not access your account or look at your stories. They are
+            yours alone unless you invite someone to view them, or would like to share them with us.
           </Text>
 
-          <Text style={text.base}>
-            When we receive your story, we&apos;ll automatically save it to your private Family
-            Fortunate account.
-          </Text>
-
-          <Text style={text.base}>Are you ready to get started right now?</Text>
-
-          <Text style={text.base}>Let&apos;s go!</Text>
+          <Text style={text.base}>Enjoy your look back on your fortunate memories this week.</Text>
 
           <Text style={text.base}>The team at Family Fortunate</Text>
 
-          <img
-            src="/static/Email bottom banner gift 1.svg"
-            alt="Email bottom banner"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          />
-
+          <div
+            style={{
+              display: 'relative',
+              gap: '8px',
+              marginTop: '8%',
+              marginBottom: '24px',
+            }}
+          >
+            <Text style={text.base}>
+              Would you like to share Family Fortunate with someone you love? You already know
+              it&apos;s the perfect gift so if someone you know has a special occasion coming up,
+              you can buy them a Family Fortunate membership & receive a huge 25% member&apos;s
+              discount.
+            </Text>
+            <Text style={text.base}>BUY A GIFT MEMBERSHIP</Text>
+          </div>
           <div
             style={{
               display: 'flex',

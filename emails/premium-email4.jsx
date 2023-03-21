@@ -96,9 +96,21 @@ export default function Email() {
 
           <Text style={text.heading}>[name,] [question]</Text>
 
-          <Text style={text.base}>Hi [name], your question of the week is</Text>
+          <Text style={text.base}>
+            Hi [name], have you been wondering what this week&apos;s question will be?
+          </Text>
+
+          <Text style={text.base}>Your question of the week is</Text>
 
           <Text style={text.headingcolorbase}>[randomised question from the question bank] </Text>
+
+          <Text style={text.base}>
+            Log into your Family Fortunate &nbsp;
+            <a href="#" style={{ base, color: '#0037FC' }}>
+              [link]
+            </a>{' '}
+            &nbsp;account to browse your questions & edit your stories.
+          </Text>
 
           <div
             style={{
@@ -114,32 +126,14 @@ export default function Email() {
           </div>
 
           <Text style={text.base}>
-            Has this week&apos;s prompt inspired you? If not, remember you can go to your membership
-            page &amp; select another question&nbsp;
-            <a href="#" style={{ base, color: '#0037FC' }}>
-              [link]
-            </a>{' '}
-            &nbsp;from the vast bank of inspiration you have available to you.
+            Enjoy your look back in time this week. We hope you get a kick out of where your
+            memories take you.
           </Text>
-
-          <Text style={text.base}>
-            Whether your story is a few pages, or a few lines long doesn&apos;t matter. It&apos;s
-            your story so make it what you will.
-          </Text>
-
-          <Text style={text.base}>
-            When we receive your story, we&apos;ll automatically save it to your private Family
-            Fortunate account.
-          </Text>
-
-          <Text style={text.base}>Are you ready to get started right now?</Text>
-
-          <Text style={text.base}>Let&apos;s go!</Text>
 
           <Text style={text.base}>The team at Family Fortunate</Text>
 
           <img
-            src="/static/Email bottom banner gift 1.svg"
+            src="/static/Email bottom banner Tip 1.svg"
             alt="Email bottom banner"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />

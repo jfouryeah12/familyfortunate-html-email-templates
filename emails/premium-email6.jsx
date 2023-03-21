@@ -96,9 +96,17 @@ export default function Email() {
 
           <Text style={text.heading}>[name,] [question]</Text>
 
-          <Text style={text.base}>Hi [name], your question of the week is</Text>
+          <Text style={text.base}>Hi [name], we hope your writing is progressing nicely!</Text>
+
+          <Text style={text.base}>Your question of the week is</Text>
 
           <Text style={text.headingcolorbase}>[randomised question from the question bank] </Text>
+
+          <Text style={text.base}>
+            If you don&apos;t have time to get started on this week&apos;s prompt right now,
+            that&apos;s OK. You can access this question and all your previous work through your
+            membership account.
+          </Text>
 
           <div
             style={{
@@ -114,32 +122,29 @@ export default function Email() {
           </div>
 
           <Text style={text.base}>
-            Has this week&apos;s prompt inspired you? If not, remember you can go to your membership
-            page &amp; select another question&nbsp;
-            <a href="#" style={{ base, color: '#0037FC' }}>
-              [link]
-            </a>{' '}
-            &nbsp;from the vast bank of inspiration you have available to you.
+            When you&apos;re done, your story will be saved to your private Family Fortunate (log-in
+            page) account. No one can access your stories unless you have them permission and a
+            password.
+          </Text>
+
+          <Text style={{ fontWeight: '700', color: '#59626B' }}>PUBLISH A STORY</Text>
+
+          <Text style={text.base}>
+            Would you like to share any of your stories with other storytellers? You can email your
+            story to us & if you&apos;re selected, it will be posted on our social media channels.
           </Text>
 
           <Text style={text.base}>
-            Whether your story is a few pages, or a few lines long doesn&apos;t matter. It&apos;s
-            your story so make it what you will.
+            Would you like to share any of your stories with other storytellers? You can email your
+            story to us & if you&apos;re selected, it will be posted on our social media channels.
           </Text>
 
-          <Text style={text.base}>
-            When we receive your story, we&apos;ll automatically save it to your private Family
-            Fortunate account.
-          </Text>
-
-          <Text style={text.base}>Are you ready to get started right now?</Text>
-
-          <Text style={text.base}>Let&apos;s go!</Text>
+          <Text style={text.base}>We love hearing the magical histories of our storytellers.</Text>
 
           <Text style={text.base}>The team at Family Fortunate</Text>
 
           <img
-            src="/static/Email bottom banner gift 1.svg"
+            src="/static/Email bottom banner Tip 3.svg"
             alt="Email bottom banner"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />

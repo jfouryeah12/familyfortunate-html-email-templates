@@ -96,10 +96,11 @@ export default function Email() {
 
           <Text style={text.heading}>[name,] [question]</Text>
 
-          <Text style={text.base}>Hi [name], your question of the week is</Text>
+          <Text style={text.base}>Hi [name], </Text>
+
+          <Text style={text.base}>Your question of the week is</Text>
 
           <Text style={text.headingcolorbase}>[randomised question from the question bank] </Text>
-
           <div
             style={{
               display: 'flex',
@@ -115,12 +116,14 @@ export default function Email() {
 
           <Text style={text.base}>
             Has this week&apos;s prompt inspired you? If not, remember you can go to your membership
-            page &amp; select another question&nbsp;
+            page & select another question &nbsp;
             <a href="#" style={{ base, color: '#0037FC' }}>
               [link]
-            </a>{' '}
+            </a>
             &nbsp;from the vast bank of inspiration you have available to you.
           </Text>
+
+          <Text style={text.base}>Enjoy your look back on your fortunate memories this week.</Text>
 
           <Text style={text.base}>
             Whether your story is a few pages, or a few lines long doesn&apos;t matter. It&apos;s
@@ -136,10 +139,13 @@ export default function Email() {
 
           <Text style={text.base}>Let&apos;s go!</Text>
 
-          <Text style={text.base}>The team at Family Fortunate</Text>
+          <Text style={text.base}>
+            Best wishes for a happy & healthy week. <br />
+            The team at Family Fortunate
+          </Text>
 
           <img
-            src="/static/Email bottom banner gift 1.svg"
+            src="/static/Email bottom banner Tip 5.svg"
             alt="Email bottom banner"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
