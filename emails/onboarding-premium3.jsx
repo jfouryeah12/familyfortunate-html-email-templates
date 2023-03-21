@@ -2,7 +2,6 @@ import React from 'react'
 import { Html } from '@react-email/html'
 import { Section } from '@react-email/section'
 import { Text } from '@react-email/text'
-import { Link } from '@react-email/link'
 import defaultTheme from 'tailwindcss/defaultTheme'
 
 const base = {
@@ -46,6 +45,14 @@ const text = {
     fontSize: '18px',
     lineHeight: '24px',
   },
+  circle: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: 'black',
+    marginRight: 10,
+    alignSelf: 'center',
+  },
 }
 
 const Logo = {
@@ -54,10 +61,6 @@ const Logo = {
     marginRight: '20px',
     verticalAlign: 'middle',
   },
-}
-
-const li = {
-  margin: '0 0 8px 0',
 }
 
 const link = {
@@ -78,90 +81,57 @@ export default function Email() {
         <Section style={container}>
           <img src="/static/FF Logo 1.svg" alt="FF Logo" style={{ Logo }} />
 
-          <Text style={text.heading}>Ready to get started [name]?</Text>
+          <Text style={text.heading}>[name], heve you answered your first question?</Text>
 
-          <Text style={text.base}>Hi [name], welcome</Text>
-
+          <Text style={text.base}>Hi [name], </Text>
+          <br />
+          <Text style={text.base}>Welcome to the story of your life!</Text>
+          <br />
           <Text style={text.base}>
-            You can approach telling your story in exactly your own unique way, so your year&apos;s
-            membership provides plenty of options to do just that.
+            Have you started working on your very first question or are you thinking about it &
+            getting ready to put your thoughts into words.
           </Text>
 
           <Text style={text.base}>
-            Your very first question will arrive in your inbox shortly but whilst you&apos;re
-            waiting you might want to have a look around your personal membership platform, so here
-            are some tips for finding your way around the Family Fortunate website.
-          </Text>
-          <Section style={{ container, backgroundColor: '#f2f2f2' }}>
-            <ul style={text.base}>
-              <li style={li}>
-                Sign in{' '}
-                <Link href="#" style={link}>
-                  here
-                </Link>
-              </li>
-
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Help
-                </Link>{' '}
-                - You have access to an extensive online help centre if you need assistance finding
-                your way around your personal membership centre.
-              </li>
-            </ul>
-
-            <Text style={text.bold}>
-              You have access to more than 500 unique questions during your membership, but you have
-              even more options than that.
-            </Text>
-
-            <ul style={text.base}>
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Select a different question
-                </Link>
-              </li>
-
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Write your own question
-                </Link>
-              </li>
-
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Change the wording of your question for the week
-                </Link>
-              </li>
-
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Change the frequency of your emailed questions
-                </Link>
-              </li>
-
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Edit your story
-                </Link>{' '}
-                - You can continue to make changes to your stories right throughout your membership
-              </li>
-            </ul>
-          </Section>
-
-          <Text style={text.base_f18}>
-            I hope you enjoy the exciting journey you&apos;re about to start as you recapture your
-            memories with the help of Family Fortunate.
+            Here&apos;s another tip which comes directly from our storytellers. To make the most out
+            of their memberships, our members tell us they&apos;re most successful when they get
+            into a routine for their weekly entries.
           </Text>
 
           <Text style={text.base}>
-            Best wishes, <br />
+            Some look forward to receiving their weekly email & set time aside to write straight
+            away.
+          </Text>
+
+          <Text style={text.base}>
+            Others find writing at night a nice way to end the day, so they take a few hours to
+            think about how they&apos;ll approach their question & sit down after dinner when
+            it&apos;s nice & quiet.
+          </Text>
+
+          <Text style={text.base}>
+            Plenty of our community of storytellers told us they like to write early, have a cup of
+            tea nearby & spend some time in the morning before their day gets busy.
+          </Text>
+
+          <Text style={text.base}>
+            It doesn&apos;t matter what works for you, what matters is, try not to get too far
+            behind in your weekly sessions, otherwise it might be tricky to catch up. Remember,
+            after a year of questions you&apos;ll have the opportunity to order a printed book to
+            share with your Fortunate Family so keep those memories coming each week!
+          </Text>
+
+          <Text style={{ base, fontStyle: 'italic', color: '#59626B' }}>
+            Welcome to Family Fortunate, and enjoy!
+          </Text>
+
+          <Text style={text.base}>
             <span style={{ fontWeight: 700 }}>Rachel</span> <br />
             Founder of Family Fortunate
           </Text>
 
           <img
-            src="/static/Email bottom banner gift 1.svg"
+            src="/static/Email bottom banner gift 3.svg"
             alt="Email bottom banner"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />

@@ -2,7 +2,7 @@ import React from 'react'
 import { Html } from '@react-email/html'
 import { Section } from '@react-email/section'
 import { Text } from '@react-email/text'
-import { Link } from '@react-email/link'
+import { Button } from '@react-email/button'
 import defaultTheme from 'tailwindcss/defaultTheme'
 
 const base = {
@@ -46,6 +46,23 @@ const text = {
     fontSize: '18px',
     lineHeight: '24px',
   },
+  circle: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: 'black',
+    marginRight: 10,
+    alignSelf: 'center',
+  },
+}
+
+const button = {
+  padding: '20px 30px',
+  backgroundColor: '#21C0AD',
+  color: '#F9F8F8',
+  fontWeight: 'bold',
+  cursor: 'pointer',
+  borderRadius: '5px',
 }
 
 const Logo = {
@@ -54,10 +71,6 @@ const Logo = {
     marginRight: '20px',
     verticalAlign: 'middle',
   },
-}
-
-const li = {
-  margin: '0 0 8px 0',
 }
 
 const link = {
@@ -78,90 +91,103 @@ export default function Email() {
         <Section style={container}>
           <img src="/static/FF Logo 1.svg" alt="FF Logo" style={{ Logo }} />
 
-          <Text style={text.heading}>Ready to get started [name]?</Text>
+          <Text style={text.heading}>[name], here&apos;s your first question!</Text>
 
           <Text style={text.base}>Hi [name], welcome</Text>
 
           <Text style={text.base}>
-            You can approach telling your story in exactly your own unique way, so your year&apos;s
-            membership provides plenty of options to do just that.
+            Thanks for joining the Family Fortunate community as a premium member. There&apos;s so
+            much value in what you&apos;re about to embark on, and I&apos;m sure you&apos;ll really
+            enjoy the process of recalling & writing your stories.
           </Text>
 
           <Text style={text.base}>
-            Your very first question will arrive in your inbox shortly but whilst you&apos;re
-            waiting you might want to have a look around your personal membership platform, so here
-            are some tips for finding your way around the Family Fortunate website.
+            Each week throughout your year&apos;s membership you&apos;ll receive a weekly email.
+            You&apos;ll also receive pro tips to help you recall your memories & how to get them
+            down on paper in an engaging way. Here&apos;s the first tip, which I&apos;ve
+            incorporated into your first question so you can start out strong!
           </Text>
+
+          <Text style={text.bold}>PRO TRIP</Text>
+
+          <Text style={{ base, fontStyle: 'italic', fontSize: '12px' }}>
+            To make the most out of your membership it&apos;s always helpful for you to delve more
+            deeply into the prompt you&apos;re sent each week.
+          </Text>
+
+          <Text style={{ base, fontStyle: 'italic', fontSize: '12px' }}>
+            As you can see from your very first prompt, there are many elements to one question
+            which will help you to create or capture your thoughts, memories & experiences.
+          </Text>
+
           <Section style={{ container, backgroundColor: '#f2f2f2' }}>
-            <ul style={text.base}>
-              <li style={li}>
-                Sign in{' '}
-                <Link href="#" style={link}>
-                  here
-                </Link>
-              </li>
-
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Help
-                </Link>{' '}
-                - You have access to an extensive online help centre if you need assistance finding
-                your way around your personal membership centre.
-              </li>
-            </ul>
-
-            <Text style={text.bold}>
-              You have access to more than 500 unique questions during your membership, but you have
-              even more options than that.
+            <Text style={{ fontWeight: '600', fontSize: '12px', textAlign: 'center' }}>
+              Your very first question is:
             </Text>
 
-            <ul style={text.base}>
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Select a different question
-                </Link>
-              </li>
-
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Write your own question
-                </Link>
-              </li>
-
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Change the wording of your question for the week
-                </Link>
-              </li>
-
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Change the frequency of your emailed questions
-                </Link>
-              </li>
-
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Edit your story
-                </Link>{' '}
-                - You can continue to make changes to your stories right throughout your membership
-              </li>
-            </ul>
+            <Text style={{ fontWeight: '600', fontSize: '20px', textAlign: 'center' }}>
+              Where are you right now?
+            </Text>
           </Section>
 
-          <Text style={text.base_f18}>
-            I hope you enjoy the exciting journey you&apos;re about to start as you recapture your
-            memories with the help of Family Fortunate.
+          <Text style={{ base, fontSize: '14px' }}>
+            As the opening page of your book, perhaps you could share with your readers things like:
+          </Text>
+
+          <Section style={container}>
+            <Text style={{ base, fontSize: '14px' }}>
+              • How did you get your membership? Did you purchase it, or was it a gift from someone?
+            </Text>
+
+            <Text style={{ base, fontSize: '14px' }}>
+              • What was your first reaction when you received your gift or found the Family
+              Fortunate website? What prompted you to join?
+            </Text>
+            <Text style={{ base, fontSize: '14px' }}>
+              • Set the scence - where are yoy physically sitting right now as you begin this
+              journey? What&apos;s around you?
+            </Text>
+
+            <Text style={{ base, fontSize: '14px' }}>• Is the sun shining or is it snowing?</Text>
+
+            <Text style={{ base, fontSize: '14px' }}>• IHave you got a drink with you?</Text>
+
+            <Text style={{ base, fontSize: '14px' }}>
+              • Are there any other people around right now?
+            </Text>
+
+            <Text style={{ base, fontSize: '14px' }}>• How old are you? What&apos;s the date?</Text>
+
+            <Text style={{ base, fontSize: '14px' }}>
+              • What are you looking forward to as you move through your year of questions?
+            </Text>
+          </Section>
+
+          <div
+            style={{
+              display: 'flex',
+              gap: '8px',
+              marginTop: '8px',
+              marginBottom: '24px',
+            }}
+          >
+            <Button href="#" style={button}>
+              MY FIRST QUESTION
+            </Button>
+          </div>
+
+          <Text style={text.base}>
+            Once again, welcome, and I truly hope you enjoy creating an heirloom for your Fortunate
+            Family!
           </Text>
 
           <Text style={text.base}>
-            Best wishes, <br />
             <span style={{ fontWeight: 700 }}>Rachel</span> <br />
             Founder of Family Fortunate
           </Text>
 
           <img
-            src="/static/Email bottom banner gift 1.svg"
+            src="/static/Email bottom banner gift 2.svg"
             alt="Email bottom banner"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />

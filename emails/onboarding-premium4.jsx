@@ -2,7 +2,7 @@ import React from 'react'
 import { Html } from '@react-email/html'
 import { Section } from '@react-email/section'
 import { Text } from '@react-email/text'
-import { Link } from '@react-email/link'
+import { Button } from '@react-email/button'
 import defaultTheme from 'tailwindcss/defaultTheme'
 
 const base = {
@@ -46,6 +46,23 @@ const text = {
     fontSize: '18px',
     lineHeight: '24px',
   },
+  circle: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: 'black',
+    marginRight: 10,
+    alignSelf: 'center',
+  },
+}
+
+const button = {
+  padding: '20px 30px',
+  backgroundColor: '#21C0AD',
+  color: '#F9F8F8',
+  fontWeight: 'bold',
+  cursor: 'pointer',
+  borderRadius: '5px',
 }
 
 const Logo = {
@@ -54,10 +71,6 @@ const Logo = {
     marginRight: '20px',
     verticalAlign: 'middle',
   },
-}
-
-const li = {
-  margin: '0 0 8px 0',
 }
 
 const link = {
@@ -78,90 +91,71 @@ export default function Email() {
         <Section style={container}>
           <img src="/static/FF Logo 1.svg" alt="FF Logo" style={{ Logo }} />
 
-          <Text style={text.heading}>Ready to get started [name]?</Text>
+          <Text style={text.heading}>How was your first week [name]?</Text>
 
-          <Text style={text.base}>Hi [name], welcome</Text>
+          <Text style={text.base}>Hi [name], </Text>
+          <br />
 
           <Text style={text.base}>
-            You can approach telling your story in exactly your own unique way, so your year&apos;s
-            membership provides plenty of options to do just that.
+            Thanks for joining the Family Fortunate community. I&apos;m sure you&apos;ll really
+            enjoy the process of recalling & writing your stories.
+          </Text>
+
+          <Text style={text.base}>As a reminder, this is what will happen:</Text>
+
+          <Text style={text.base}>
+            Each week we&apos;ll email a starting point to you for inspiration. Most are questions,
+            but some might be ‘Tell me about…&apos; Either way, I hope they provide the
+            encouragement & motivation to start writing your stories.
           </Text>
 
           <Text style={text.base}>
-            Your very first question will arrive in your inbox shortly but whilst you&apos;re
-            waiting you might want to have a look around your personal membership platform, so here
-            are some tips for finding your way around the Family Fortunate website.
+            As you write, remember there are many elements to one question & thinking about those
+            will help you to create or capture your thoughts, memories & experiences.
           </Text>
-          <Section style={{ container, backgroundColor: '#f2f2f2' }}>
-            <ul style={text.base}>
-              <li style={li}>
-                Sign in{' '}
-                <Link href="#" style={link}>
-                  here
-                </Link>
-              </li>
 
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Help
-                </Link>{' '}
-                - You have access to an extensive online help centre if you need assistance finding
-                your way around your personal membership centre.
-              </li>
-            </ul>
-
-            <Text style={text.bold}>
-              You have access to more than 500 unique questions during your membership, but you have
-              even more options than that.
-            </Text>
-
-            <ul style={text.base}>
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Select a different question
-                </Link>
-              </li>
-
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Write your own question
-                </Link>
-              </li>
-
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Change the wording of your question for the week
-                </Link>
-              </li>
-
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Change the frequency of your emailed questions
-                </Link>
-              </li>
-
-              <li style={li}>
-                <Link href="#" style={link}>
-                  Edit your story
-                </Link>{' '}
-                - You can continue to make changes to your stories right throughout your membership
-              </li>
-            </ul>
+          <Section style={{ container, backgroundColor: '#f2f2f2', textAlign: 'center' }}>
+            <div style={{ textAlign: 'justify', padding: '8%' }}>
+              <Text style={text.bold}>
+                When you start to think about your weekly question, also think “Why...?”
+              </Text>
+              <Text style={text.base}>• Why did this memory pop into your head?</Text>
+              <Text style={text.base}>• Why has this memory stayed with you?</Text>
+              <Text style={text.base}>
+                • If you&apos;d forgotten about this over the years, why do you think it popped up
+                again?
+              </Text>
+              <Text style={text.base}>• Why is this memory important to you?</Text>
+              <Text style={text.base}>• Has it shaped you as a person as you&apos;ve grown?</Text>
+            </div>
           </Section>
 
-          <Text style={text.base_f18}>
-            I hope you enjoy the exciting journey you&apos;re about to start as you recapture your
-            memories with the help of Family Fortunate.
-          </Text>
+          <div
+            style={{
+              display: 'flex',
+              gap: '8px',
+              marginTop: '8%',
+              marginBottom: '8%',
+            }}
+          >
+            <Button href="#" style={button}>
+              MY FIRST QUESTION
+            </Button>
+          </div>
 
           <Text style={text.base}>
-            Best wishes, <br />
+            Are you excited? I hope so because your week 2 question will be in your inbox soon!
+          </Text>
+
+          <Text style={text.base}>Good luck and enjoy!</Text>
+
+          <Text style={text.base}>
             <span style={{ fontWeight: 700 }}>Rachel</span> <br />
             Founder of Family Fortunate
           </Text>
 
           <img
-            src="/static/Email bottom banner gift 1.svg"
+            src="/static/Email bottom banner Tip 1.svg"
             alt="Email bottom banner"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
